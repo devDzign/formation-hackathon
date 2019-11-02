@@ -22,7 +22,20 @@
                 <th>{{ post.id }}</th>
                 <td>{{ post.title }}</td>
                 <td>{{ post.content }}</td>
-                <td>TODO ACTION</td>
+                <td>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="{{ path('post_show', {'id':post.id}) }}" class="btn btn-outline-primary">Show</a>
+                        </div>
+
+                        <div class="col-12 mt-1">
+                            <a href="{{ path('post_edit',{'id': post.id}) }}" class="btn btn-outline-info">EDIT</a>
+                        </div>
+
+
+                    </div>
+
+                </td>
             </tr>
         {% endfor %}
         </tbody>
