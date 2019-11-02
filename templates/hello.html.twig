@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Hello Page {% endblock %}
+
+{% block body %}
+    <h1>La liste des perssonnes : </h1>
+    <ul>
+        {% for personne in personnes %}
+            <li>{{ personne | upper }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
