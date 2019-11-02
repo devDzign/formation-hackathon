@@ -6,17 +6,26 @@
 
     <h1> La list des Post</h1>
 
-    <table border="5px">
+    <table class="table table-hover">
+        <thead>
         <tr>
-            <td>Id</td>
-            <td>title</td>
-            <td>Content</td>
+            <th scope="col">Id</th>
+            <th scope="col">title</th>
+            <th scope="col">content</th>
+            <th scope="col">actions</th>
         </tr>
-        <tr>
-            <td>Michelle</td>
-            <td>26 ans</td>
-            <td>États-Unis</td>
-        </tr>
+        </thead>
+        <tbody>
+
+        {% for post in posts %}
+            <tr>
+                <th>{{ post.id }}</th>
+                <td>{{ post.title }}</td>
+                <td>{{ post.content }}</td>
+                <td>TODO ACTION</td>
+            </tr>
+        {% endfor %}
+        </tbody>
     </table>
 
 {% endblock %}

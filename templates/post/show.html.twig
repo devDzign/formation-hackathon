@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Detail de post {{ post.id }}{% endblock %}
+{% block body %}
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-primary mb-3">
+                <div class="card-header">{{ post.id }} - {{ post.title }}</div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ post.title }}</h4>
+                    <p class="card-text">{{ post.content }}</p>
+                </div>
+                <div class="card-footer">
+                    {{ include('post/_form_delete.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
